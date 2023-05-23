@@ -2,5 +2,5 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.dev/piizei/argo-bootstrap
+    repoURL: https://github.com/piizei/argo-bootstrap.git
     targetRevision: HEAD
