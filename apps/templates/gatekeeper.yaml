@@ -20,4 +20,4 @@ spec:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: gatekeeper-system
+  name: gatekeeper
