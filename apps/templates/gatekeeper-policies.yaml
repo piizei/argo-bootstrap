@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gatekeeper-policies
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: gatekeeper-policies
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: gatekeeper-policies
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision }}
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gatekeeper-policies
