@@ -9,7 +9,7 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: gatekeeper
+    namespace: gatekeeper-system
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
@@ -20,4 +20,4 @@ spec:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: gatekeeper
+  name: gatekeeper-system
