@@ -16,3 +16,8 @@ spec:
     path: descheduler
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: descheduler
